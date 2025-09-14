@@ -21,6 +21,14 @@
   position: relative;
   z-index: 999;
 }
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 24px;
+  text-align: center;
+  color: #333; 
+  margin-bottom: 25px;
+}
+
 
 .close {
   position: absolute;
@@ -47,9 +55,17 @@
 
 .modal-text {
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 22px;
   text-align: center;
   color: #333; 
+}
+
+.modal-content.yellow .modal-text {
+  color: #FFA500; 
+}
+
+.modal-content.yellow h2{
+  color:#007BFF;
 }
 
 .close:hover {
@@ -64,3 +80,7 @@
   display: none;
 }
 
+
+.yellow {
+  background-color:  yellow;
+}
