@@ -4,13 +4,6 @@ import './index.css';
 import Modal from './Modal';
 import reportWebVitals from './reportWebVitals';
 
-document.body.addEventListener('keydown', function(event) {
-  if (event.key === "Escape") {
-    document.querySelector('.modal').classList.add('hidden');
-    document.body.style.overflow = 'auto';
-  }
-});
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -14,17 +14,29 @@ class Modal extends Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
+    
+    if (this.state.isOpen && document.body) {
+      document.body.style.overflow = 'hidden';
+    }
   }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyDown);
+
+    if (document.body) {
+      document.body.style.overflow = 'auto';
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.isOpen && !prevState.isOpen) {
-      document.body.style.overflow = 'hidden';
+      if (document.body) {
+        document.body.style.overflow = 'hidden';
+      }
     } else if (!this.state.isOpen && prevState.isOpen) {
-      document.body.style.overflow = 'auto';
+      if (document.body) {
+        document.body.style.overflow = 'auto';
+      }
     }
   }
 
